@@ -1,0 +1,37 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    padding: 20px 30px 20px 30px;
+    background-color: black;
+    color: white;
+}
+
+.ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.leftItem {
+    display: flex;
+}
+
+.centerItem {
+    position: absolute; /* Position the center item */
+    left: 50%; /* Place it in the middle horizontally */
+    transform: translateX(-50%); /* Adjust to truly center it */
+}
+
+.rightItems {
+    display: flex;
+}
+
+.li {
+    padding: 10px;
+}

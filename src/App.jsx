@@ -1,13 +1,12 @@
 import React from 'react';
 import Navbar from './assets/components/navbar';
-
-let name = 'Test';
+import PrayerTime from './assets/components/PrayerTime';
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <p>{name}</p>
+            <PrayerTime />
         </>
     );
 };

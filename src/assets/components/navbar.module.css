@@ -5,9 +5,10 @@
 
 .container {
     display: flex;
-    padding: 20px 30px 20px 30px;
+    padding: 10px 20px;
     background-color: black;
     color: white;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.445); /* Add bottom shadow */
 }
 
 .ul {
@@ -16,16 +17,17 @@
     margin: 0;
     width: 100%;
     font-size: 1.2em;
+    align-items: center;
 }
 
 .leftItem {
     display: flex;
 }
 
-.centerItem {
-    position: absolute; /* Position the center item */
-    left: 50%; /* Place it in the middle horizontally */
-    transform: translateX(-50%); /* Adjust to truly center it */
+.centerItemLi {
+    color: rgb(0, 204, 255);
+    font-size: 1.6em;
+    font-style: italic;
 }
 
 .rightItems {

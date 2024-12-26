@@ -1,14 +1,38 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
+/* Container for the entire prayer times list */
+.prayerTimes {
+    padding: 20px;
+    background-color: #000000; /* Light gray background */
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto; /* Center the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.prayerTimeTitle {
-    color: red;
-    font-size: 1.6em;
-    padding-top: 50px;
+/* Style for individual prayer time container */
+.container {
+    margin: 10px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; /* Evenly spread out the name and time */
+    align-items: center; /* Vertically align them */
+    padding: 12px 16px;
+    background-color: #fff; /* White background for each item */
+    border: 1px solid #dddddd; /* Light border */
+    border-radius: 6px;
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: 600; /* Make the text bold */
+    color: #000000; /* Dark text for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for background on hover */
+}
+
+/* Hover effect for list items */
+.container:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Optional: Style for the title or heading if needed */
+.prayerTimes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
 }

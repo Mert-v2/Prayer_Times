@@ -8,7 +8,7 @@
     padding: 10px 20px;
     background-color: black;
     color: white;
-    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.445); /* Add bottom shadow */
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.445);
 }
 
 .ul {
@@ -27,7 +27,6 @@
 .centerItemLi {
     color: rgb(0, 204, 255);
     font-size: 1.6em;
-    font-style: italic;
 }
 
 .rightItems {

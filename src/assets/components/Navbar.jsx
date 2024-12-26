@@ -15,7 +15,6 @@ const Navbar = () => {
                 </div>
                 <div className={styles.rightItems}>
                     <li className={styles.li}>Empty</li>
-                    <li className={styles.li}>Empty</li>
                 </div>
             </ul>
         </div>

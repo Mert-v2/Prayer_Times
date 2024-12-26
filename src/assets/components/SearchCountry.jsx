@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import styles from './searchCountry.module.css';
 
-const SearchCountry = () => {
-    const [city, setCity] = useState('');
-    const [country, setCountry] = useState('');
+const SearchCountry = ({ onSearch }) => {
+    const [localCity, setLocalCity] = useState('');
+    const [localCountry, setLocalCountry] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSearch(localCity, localCountry);
+    };
 
     return (
-        <div className={styles.searchContainer}>
+        <form onSubmit={handleSubmit} className={styles.searchContainer}>
             <div className={styles.label}>City</div>
             <input
                 type="text"
                 className={styles.customBorder}
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
+                value={localCity}
+                onChange={(e) => setLocalCity(e.target.value)}
                 placeholder="Enter City"
             />
 
@@ -20,13 +25,15 @@ const SearchCountry = () => {
             <input
                 type="text"
                 className={styles.customBorder}
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
+                value={localCountry}
+                onChange={(e) => setLocalCountry(e.target.value)}
                 placeholder="Enter Country"
             />
 
-            <button className={styles.button}>Search</button>
-        </div>
+            <button type="submit" className={styles.button}>
+                Search
+            </button>
+        </form>
     );
 };
 

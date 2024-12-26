@@ -1,16 +1,13 @@
 import React from 'react';
 import './assets/components/globalStyles.css';
-
-import Navbar from './assets/components/navbar';
-import PrayerTime from './assets/components/PrayerTime';
-import SearchCountry from './assets/components/SearchCountry';
+import Navbar from './assets/components/Navbar.jsx';
+import ParentComponent from './assets/components/ParentComponent.jsx';
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <SearchCountry />
-            <PrayerTime />
+            <ParentComponent />
         </>
     );
 };

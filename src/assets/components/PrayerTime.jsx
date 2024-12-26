@@ -1,15 +1,11 @@
 import styles from './prayertime.module.css';
 import React, { useState, useEffect } from 'react';
 
-const PrayerTime = () => {
+const PrayerTime = ({ selectedCity, country }) => {
     const [prayerTimes, setPrayerTimes] = useState(null);
-    const [city, setCity] = useState('Portsmouth');
-    const [country, setCountry] = useState('GB');
     const [calculationType, setCalculationType] = useState(4);
 
-    const currentDate = new Date().toISOString().split('T')[0];
-
-    const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=${calculationType}`;
+    const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${selectedCity}&country=${country}&method=${calculationType}`;
 
     useEffect(() => {
         fetch(apiUrl)
@@ -19,6 +15,9 @@ const PrayerTime = () => {
 
     return (
         <div className={styles.prayerTimes}>
+            <div>
+                {selectedCity}, {country}
+            </div>
             <ul>
                 {prayerTimes &&
                     Object.entries(prayerTimes)

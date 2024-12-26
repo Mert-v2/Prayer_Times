@@ -15,7 +15,7 @@ const PrayerTime = ({ selectedCity, country }) => {
 
     return (
         <div className={styles.prayerTimes}>
-            <div>
+            <div className={styles.locationText}>
                 {selectedCity}, {country}
             </div>
             <ul>
